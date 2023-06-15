@@ -10,7 +10,7 @@ const SavedRecipes = () => {
   useEffect(() => {
     const fetchSavedRecipes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/recipes/savedRecipes/${userID}`);
+        const response = await axios.get(`https://eattodie-backend.vercel.app/recipes/savedRecipes/${userID}`);
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
         console.error(err);
@@ -22,7 +22,7 @@ const SavedRecipes = () => {
 
   const removeRecipe = async (recipeID) => {
     try {
-      await axios.put("http://localhost:3001/recipes/removeRecipe", { userID, recipeID });
+      await axios.put("https://eattodie-backend.vercel.app/recipes/removeRecipe", { userID, recipeID });
       setSavedRecipes((oldValue) => {
         return oldValue.filter((recipeid) => recipeid._id !== recipeID);
       });

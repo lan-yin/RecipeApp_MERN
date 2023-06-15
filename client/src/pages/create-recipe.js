@@ -38,7 +38,9 @@ const CreateRecipe = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/recipes", recipe, { headers: { authorization: cookies.access_token } });
+      await axios.post("https://eattodie-backend.vercel.app/recipes", recipe, {
+        headers: { authorization: cookies.access_token },
+      });
       // TODO 全部空白送出不會報錯
       alert("Recipe Created.");
       navigate("/");
