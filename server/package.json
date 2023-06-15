@@ -1,5 +1,5 @@
 {
-  "name": "RecipeApp",
+  "name": "mern_recipe",
   "version": "1.0.0",
   "description": "Web App to post recipes",
   "main": "index.js",
