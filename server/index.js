@@ -4,8 +4,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 // 使用 import 時要將檔案的副檔名打出來
-import { userRouter } from "./routes/users.js";
-import { recipesRouter } from "./routes/recipes.js";
+import { userRouter } from "./src/routes/users.js";
+import { recipesRouter } from "./src/routes/recipes.js";
 
 const app = express();
 dotenv.config();
